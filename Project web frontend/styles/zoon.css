@@ -1,0 +1,60 @@
+
+
+body {
+    margin-right: -0.5em;
+    font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+    background-color: #E7E7E9;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+
+
+/*MAIN*/
+
+main {
+    height: 150em;
+    background-image: url(images/zoon_smol_1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right 6em;
+    font-family: "lato", "open sans", "arial", "verdana", sans-serif;
+    background-attachment: scroll;
+    margin-left: -1em;
+}
+
+
+
+@media (min-width: 36em) {
+    
+    body{
+        height: 72em;
+    }
+    main {
+        background-image: url(images/zoon_still_3.jpg);
+        background-size: auto 100%;
+        background-position: center top 3em;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 80em;
+        display: grid;
+        grid-template-columns: 1fr 20% auto 1fr;
+        grid-template-rows: 0.2em 5% 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+}
+
+@media (min-width: 70em) {
+   
+    main {
+        background-image: url(images/zoon_still_3.jpg);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 120em;
+        display: grid;
+        grid-template-columns: 1fr 30% 1fr 1fr;
+        grid-template-rows: 1.5em 5% 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+}

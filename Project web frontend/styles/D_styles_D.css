@@ -1,0 +1,1857 @@
+    /* ==================== BASICS ==================== */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    font-size: 0;
+    padding: 0.875rem;
+  }
+  
+  .container > * {
+    font-size: 1rem;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: 'NS Sans', sans-serif;
+    color: #060922;
+    line-height: 1.5625rem;
+    background: #E6E6E9;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  body.paranoia nav ul li:first-child,
+  body.sportcommentaar nav ul li:first-child,
+  body.neerslachtig nav ul li:first-child {
+    visibility: hidden;
+  }
+  
+  svg {
+    display: inline-block;
+    position: relative;
+    top: 0.3rem;
+    left: -0.5rem;
+    margin-right: 0rem;
+    transition: left .1s ease-out;
+    fill: #002F82;
+  }
+  
+  a:hover svg,
+  .orientation:hover svg,
+  a.arrowlink:hover svg {
+    left: -0.3rem;
+    fill: #003082;
+  }
+  
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  
+  input {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  /* ==================== BASICS END ==================== */
+  /* ==================== HEADINGS AND PARAGRAPH ==================== */
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.625rem 0;
+  }
+  
+  h1 {
+    font-size: 1.75em;
+  }
+  
+  h2 {
+    font-size: 1.5em
+  }
+  
+  h3 {
+    font-size: 1.25em
+  }
+  
+  h4 {
+    font-size: 1em;
+  }
+  
+  h5 {
+    font-size: 0.8em;
+  }
+  
+  h6 {
+    font-size: 0.6em;
+  }
+  
+  p {
+    font-size: 0.9em;
+  }
+  /* ==================== HEADINGS AND PARAGRAPH END ==================== */
+  /* ==================== CONTAINER AND MAIN ==================== */
+  
+  main {
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 75%;
+    justify-content: space-between;
+    vertical-align: top;
+    padding-left: 0.875rem;
+  }
+  
+  .container {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  
+  .container-about {
+    width: 100%;
+    background: #FFF;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 0.875rem;
+  }
+  
+  .container-about > div {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  body.sportcommentaar main,
+  body.neerslachtig main {
+    display: block;
+    margin: 0 auto;
+    padding-left: 0;
+    justify-content: flex-start;
+    max-width: 75%;
+  }
+  
+  body.sportcommentaar .container-about section,
+  body.neerslachtig .container-about section {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  body.sportcommentaar .container-about section.download,
+  body.neerslachtig .container-about section.download {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 40%;
+  }
+  
+  section.schrijver img {
+    border-radius: 50%;
+    padding-left: 0!important;
+  }
+  
+  section.schrijver {
+    margin-top: 2rem;
+  }
+  
+  section.schrijver h4 {
+    font-weight: 700;
+  }
+  
+  section.schrijver div {
+    margin-left: 2rem;
+  }
+  
+  body.sportcommentaar .container-about section form,
+  body.neerslachtig .container-about section form {
+    width: 100%;
+    padding: 0.5rem 2rem 2rem 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(180deg, rgba(255, 201, 23, .9) 0, #ffc917 60px, #ffc917);
+    color: #003082;
+  }
+  
+  body.sportcommentaar .container-about section form legend,
+  body.neerslachtig .container-about section form legend {
+    font-size: 1.5em;
+    line-height: 1.875em;
+    margin-bottom: 1rem;
+    font-weight: normal;
+  }
+  
+  body.sportcommentaar .container-about section form label,
+  body.neerslachtig .container-about section form label {
+    display: inline-block;
+    width: calc(50.43% - (0.875rem/2));
+  }
+  
+  body.sportcommentaar .container-about section form label:nth-child(4),
+  body.neerslachtig .container-about section form label:nth-child(4) {
+    display: block;
+  }
+  
+  body.sportcommentaar .container-about section form label:before,
+  body.neerslachtig .container-about section form label:before {
+    display: none;
+  }
+  
+  body.sportcommentaar .container-about section form label,
+  body.neerslachtig .container-about section form label {
+    padding-top: 0.5625rem;
+    text-align: left;
+  }
+  
+  body.sportcommentaar .container-about section form input[type="text"],
+  body.neerslachtig .container-about section form input[type="text"],
+  body.sportcommentaar .container-about section form textarea,
+  body.neerslachtig .container-about section form textarea {
+    padding: 1rem;
+    border: none;
+    font-family: 'NS Sans', sans-serif;
+    width: 100%;
+  }
+  
+  body.sportcommentaar .container-about section form input[type="text"]:valid,
+  body.neerslachtig .container-about section form input[type="text"]:valid {
+    border-bottom: solid 1px #003082;
+    background: green;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+  }
+  
+  body.sportcommentaar .container-about section form label:nth-child(4),
+  body.neerslachtig .container-about section form label:nth-child(4) {
+    width: 100%;
+  }
+  
+  body.sportcommentaar .container-about section form textarea,
+  body.neerslachtig .container-about section form textarea {
+    display: block;
+    margin: 0.5625rem 0 0 0;
+    width: 100%;
+    resize: vertical;
+    padding: 1rem;
+    border: none;
+    height: 15.63rem;
+    font-family: 'NS Sans', sans-serif;
+  }
+  
+  body.sportcommentaar .container-about section form input[type="submit"],
+  body.neerslachtig .container-about section form input[type="submit"] {
+    color: #FFF;
+    box-shadow: 0 -0.125rem 0 #005CA0 inset;
+    padding: 0.625rem 1.125rem;
+    padding-right: 2.9375rem;
+    text-align: center;
+    line-height: 1.5625rem;
+    font-size: 1em;
+    border: none;
+    text-decoration: none;
+    overflow: hidden;
+    transition: background 0.15s ease-in-out;
+    cursor: pointer;
+    margin: 1rem 2rem 0 0;
+    background: url(../img/arrow-white.svg) #0079D3 no-repeat;
+    background-position: 94% center;
+  }
+  
+  body.sportcommentaar .container-about section form input[type="submit"]:hover,
+  body.neerslachtig .container-about section form input[type="submit"]:hover {
+    box-shadow: 0 -0.125rem 0 #005CA0 inset;
+    background: url(../img/arrow-white.svg) #005CA0 no-repeat;
+    background-position: 94% center;
+  }
+  
+  body.sportcommentaar .container-about section form input:focus,
+  body.neerslachtig .container-about section form input:focus,
+  body.sportcommentaar .container-about section form textarea:focus,
+  body.neerslachtig .container-about section form textarea:focus {}
+  
+  .share {
+    min-width: 60%;
+  }
+  
+  .share button {}
+  
+  .share button:first-child {
+    margin: 0;
+  }
+  
+  .share button svg {
+    display: inline-block;
+    position: relative;
+    left: 0!important;
+  }
+  
+  .share button.facebook {
+    background: #3b5998;
+    box-shadow: inset 0 -0.125rem 0 #314A7F;
+  }
+  
+  .share button.facebook:hover {
+    box-shadow: inset 0 -3.125rem 0 #314A7F;
+  }
+  
+  .share button.twitter {
+    background: #00cdff;
+    box-shadow: inset 0 -0.125rem 0 #00B7E6;
+  }
+  
+  .share button.twitter:hover {
+    box-shadow: inset 0 -3.125rem 0 #00B7E6;
+  }
+  
+  .share button.google {
+    background: #d24228;
+    box-shadow: inset 0 -0.125rem 0 #B93A23;
+  }
+  
+  .share button.google:hover {
+    box-shadow: inset 0 -3.125rem 0 #B93A23;
+  }
+  
+  body.sportcommentaar section button,
+  body.neerslachtig section button {
+    min-height: 3rem;
+    display: inline-block;
+    background: #0079d3;
+    padding: .625rem 1.125rem;
+    border: none;
+    position: relative;
+    color: #FFF;
+    font-size: 1rem;
+    line-height: calc(2.188rem - .625rem);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: inset 0 -0.125rem 0 #005ca1;
+    -webkit-transition: box-shadow 0.15s ease;
+    -moz-transition: box-shadow 0.15s ease;
+    transition: box-shadow 0.15s ease;
+    vertical-align: top;
+  }
+  
+  body.sportcommentaar section button p,
+  body.neerslachtig section button p {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  
+  body.sportcommentaar section button:hover,
+  body.neerslachtig section button:hover {
+    box-shadow: inset 0 -3.125rem 0 #005ca0;
+  }
+  
+  @-webkit-keyframes hacks {}
+  
+  @-moz-keyframes hacks {}
+  
+  body.sportcommentaar section button svg,
+  body.neerslachtig section button svg {
+    width: 1.25rem;
+    height: auto;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.15s ease;
+    -moz-transition: -moz-transform 0.15s ease;
+    transition: transform 0.15s ease;
+    left: 0.3125rem;
+    fill: #FFF;
+    position: relative;
+    z-index: 1;
+  }
+  
+  body.sportcommentaar section button.download svg,
+  body.neerslachtig section button.download svg {
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    top: initial;
+  }
+  
+  body.sportcommentaar section button.download:before,
+  body.neerslachtig section button.download:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, #0079d3 25%, #005ca1 0, #005ca1 50%, #0079d3 0, #0079d3 75%, #005ca1 0);
+    background-size: 1.875rem 1.875rem;
+    -webkit-transition: -webkit-transform 2s ease;
+    -moz-transition: -moz-transform 2s ease;
+    transition: transform 2s ease;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  
+  body.sportcommentaar section button.download div,
+  body.neerslachtig section button.download div {
+    margin: 0;
+    border: none;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    width: 2.188rem;
+    height: 1.25rem;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    transform-origin: bottom center;
+  }
+  
+  body.sportcommentaar section button.download svg *,
+  body.neerslachtig section button.download svg * {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  body.sportcommentaar section button.download svg > g g:nth-of-type(1),
+  body.neerslachtig section button.download svg > g g:nth-of-type(1) {
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    -webkit-transition-delay: 0.8s;
+    -moz-transition-delay: 0.8s;
+    transition-delay: 0.8s;
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+  }
+  
+  body.sportcommentaar section button.download svg > g g:nth-of-type(2),
+  body.neerslachtig section button.download svg > g g:nth-of-type(2) {
+    position: relative;
+  }
+  
+  body.sportcommentaar section button.download.active,
+  body.neerslachtig section button.download.active {
+    -webkit-animation: hacks 1s ease-in;
+    -moz-animation: hacks 1s ease-in;
+    animation: hacks 1s ease-in;
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+  }
+  
+  body.sportcommentaar section button.download.active div,
+  body.neerslachtig section button.download.active div {
+    height: 0.0625rem;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  
+  body.sportcommentaar section button.download.active svg > g g:nth-of-type(1),
+  body.neerslachtig section button.download.active svg > g g:nth-of-type(1) {
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  
+  body.sportcommentaar section button.download.active svg > g g:nth-of-type(2),
+  body.sportcommentaar section button.download.active svg > g g:nth-of-type(3),
+  body.neerslachtig section button.download.active svg > g g:nth-of-type(2),
+  body.neerslachtig section button.download.active svg > g g:nth-of-type(3) {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  
+  body.sportcommentaar section button.download.downloading:before,
+  body.neerslachtig section button.download.downloading:before {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  
+  body.sportcommentaar section button.download.done:before,
+  body.neerslachtig section button.download.done:before {
+    display: none;
+  }
+  
+  body.sportcommentaar section button.later svg,
+  body.neerslachtig section button.later svg {
+    top: 0.3rem;
+  }
+  
+  body.sportcommentaar section button.later svg path,
+  body.neerslachtig section button.later svg path {
+    fill: #fff;
+  }
+  
+  body.sportcommentaar section button.later svg circle,
+  body.neerslachtig section button.later svg circle {
+    fill: #fff;
+    transform-origin: center;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+  
+  body.sportcommentaar section button.later.active circle,
+  body.neerslachtig section button.later.active circle {
+    transform: scale(1);
+  }
+  
+  body.sportcommentaar section button.later.active::after,
+  body.neerslachtig section button.later.active::after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  body.sportcommentaar section button.later.active svg > g:nth-of-type(2) path,
+  body.neerslachtig section button.later.active svg > g:nth-of-type(2) path {
+    fill: #0079D3;
+    z-index: 1;
+  }
+  
+  .container-about section,
+  .container-about > div {
+    width: 75%;
+    margin: 0 auto;
+  }
+  /* ==================== CONTAINER AND MAIN END ==================== */
+  /* ==================== SPORTCOMMENTAAR ==================== */
+  
+  body.sportcommentaar {
+        background: red;
+    background: linear-gradient(180deg, #0000ff, #ff0000);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite
+  }
+
+  @-webkit-keyframes AnimationName {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+  blockquote{
+
+
+  }
+
+  blockquote:first-of-type:before{
+    quotes: "\201C""\201D";
+    left: 5rem;
+    top: 30rem;
+  }
+    blockquote:last-of-type:before{
+        quotes: "\201D""\201C";
+    right: 5rem;
+    top: 48rem;
+  }
+
+blockquote:before {
+      position: fixed;
+    z-index: 1;
+        content: open-quote;
+    font-size: 10em;
+    color: #FFF;
+        
+}
+  
+  body.sportcommentaar main p {
+    display: inline-block;
+    font-size: 1em;
+    background: red;
+    padding: 1rem;
+    margin: 1rem 1rem 0rem 0;
+    transform: skew(-15deg);
+    color: #FFF;
+    font-family: 'Lato Light', sans-serif;
+  }
+  
+  body.sportcommentaar main p:nth-of-type(6),
+  body.sportcommentaar main p:nth-of-type(n+12):nth-of-type(-n+18),
+  body.sportcommentaar main p:nth-of-type(n+28):nth-of-type(-n+29),
+  body.sportcommentaar main p:nth-of-type(35),
+  body.sportcommentaar main p:nth-of-type(n+49):nth-of-type(-n+52),
+  body.sportcommentaar main p:nth-of-type(n+57):nth-of-type(-n+59),
+  body.sportcommentaar main p:nth-of-type(n+61):nth-of-type(-n+62),
+  body.sportcommentaar main p:nth-of-type(n+64):nth-of-type(-n+65),
+  body.sportcommentaar main p:nth-of-type(73),
+  body.sportcommentaar main p:nth-of-type(n+78):nth-of-type(-n+84) {
+    font-family: 'Lato Black', sans-serif;
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+
+  body.sportcommentaar main h1{
+    font-family: 'Lato Black', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    color: #FFF;
+  }
+  /* ==================== SPORTCOMMENTAAR END ==================== */
+  /* ==================== PARANOIA ==================== */
+  
+  body.paranoia {
+    background: #000;
+    overflow-x: hidden;
+  }
+  
+  body.paranoia main {
+    margin-top: 3.75rem;
+    max-width: 100%;
+    width: 100%;
+    height: calc(100vh - 3.75rem);
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  body.paranoia main div {
+    width: 12.5rem;
+    height: 1.25rem;
+    border: 2px solid #FF0000;
+    border-radius: 50% 50% 0 0;
+    border-color: #FF0000 transparent transparent transparent;
+    position: fixed;
+    top: 10.31rem;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
+  
+  body.paranoia main figure {
+    height: calc(100vh);
+    width: 100%;
+    margin-top: 3.75rem;
+  }
+  
+  body.paranoia main img {
+    position: relative;
+    left: 50%;
+    width: 200vw;
+    min-width: 100vw;
+    /*padding: calc(2em + 20vh) 0 2em 0;*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    transform-origin: center center;
+    transition: transform 0.1s ease;
+    will-change: transform;
+  }
+  /* ==================== PARANOIA END ==================== */
+  /* ==================== NEERSLACHTIG ==================== */
+  
+  body.neerslachtig {
+    background: #DEDEDE;
+  }
+  
+  body.neerslachtig main img:first-child {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    float: left;
+  }
+  
+  body.neerslachtig main img {
+    shape-outside: ellipse(15.94rem 24.38rem at 50% 50%);
+    float: right;
+    max-width: 50%;
+    padding-left: 3rem;
+  }
+  
+  body.neerslachtig main p {
+    max-width: 75%;
+    font-family: 'Rotis SemiSans Light 45', sans-serif;
+    display: block;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.375rem;
+  }
+  
+  body.neerslachtig main h1 {
+    font-family: 'Rotis SemiSans bold 65', sans-serif;
+    color: #000;
+    font-size: 5.938rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin: 5rem 0 5rem 0;
+  }
+  
+  body.neerslachtig main h1:last-of-type {
+    position: relative;
+    top: -6.563rem;
+    opacity: 0.15;
+    transform: skew(-15deg);
+    left: 0.625rem;
+    margin: 0;
+  }
+  /* ==================== LINKS AND BUTTONS ==================== */
+  
+  a,
+  button {
+    color: #2D77BD;
+    text-decoration: none;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    transition: box-shadow .15s ease-in-out;
+    cursor: pointer;
+  }
+  
+  a:hover,
+  button:hover {
+    color: #003082;
+  }
+  
+  a:focus,
+  button:focus {
+    outline: none;
+  }
+  
+  button {
+    font-family: 'NS Sans', sans-serif;
+  }
+  
+  .orientation {
+    font-size: 1em;
+    font-family: 'NS Sans', sans-serif;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  
+  aside form button:before {
+    content: "";
+    display: inline-block;
+    color: #FFF;
+    height: 2.188rem;
+    position: relative;
+    width: 2.188rem;
+    margin: 0 0.625rem 0 0;
+    vertical-align: middle;
+  }
+  
+  button.new:before {
+    background: url(../img/new.svg) no-repeat scroll center center;
+  }
+  
+  button.trending:before {
+    background: url(../img/trending.svg) no-repeat scroll center center;
+  }
+  /* ==================== LINKS AND BUTTONS END ==================== */
+  /* ==================== HEADER AND NAV ==================== */
+  
+  nav {
+    box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+    background: #FFF;
+    left: 0;
+    min-height: 3.75rem;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem 0 1rem;
+  }
+  
+  nav section {
+    margin-top: 1rem!important;
+    margin-bottom: 0!important;
+  }
+  
+  @media all and (min-width: 10rem) {
+    nav {
+      position: fixed;
+    }
+  }
+  
+  .logo {
+    display: inline-block;
+    position: relative;
+    top: 0.3em;
+    border: none;
+  }
+  
+  .logo h2 {
+    display: inline!important;
+    color: #003082!important;
+    position: relative!important;
+    text-shadow: none!important;
+    font-weight: normal!important;
+    left: 0!important;
+    top: 0!important;
+    line-height: normal!important;
+  }
+  
+  form.zoeken label p {
+    display: inline-block;
+    font-size: 1em;
+    margin-left: -0.5rem;
+  }
+  
+  input:focus + p {
+    display: none!important;
+  }
+  
+  form.zoeken label input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+  }
+  
+  form.zoeken label input::-webkit-search-decoration,
+  form.zoeken label input::-webkit-search-cancel-button {
+    display: none;
+  }
+  
+  form.zoeken label input[type=search] {
+    background: url(../img/search.svg) no-repeat 0px center;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+    border: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+  }
+  
+  form.zoeken label input[type=search]:focus {
+    width: 130px;
+    background-color: #FFF;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #003082;
+  }
+  
+  form.zoeken label input:-moz-placeholder {
+    color: #999;
+  }
+  
+  form.zoeken label input::-webkit-input-placeholder {
+    color: #999;
+  }
+  
+  form.zoeken label input[type=search] {
+    width: 0.9375rem;
+    padding-left: 0.5rem;
+    color: transparent;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: -0.5rem;
+  }
+  
+  form.zoeken label input[type=search]:hover {
+    background-color: #fff;
+  }
+  
+  form.zoeken label input[type=search]:focus {
+    width: 130px;
+    padding-left: 32px;
+    color: #000;
+    background-color: #fff;
+    cursor: auto;
+  }
+  
+  form.zoeken label input:-moz-placeholder {
+    color: transparent;
+  }
+  
+  form.zoeken label input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  @media all and (min-width: 10rem) and (max-width: 46rem) {
+    .logo h2 {
+      display: none!important;
+    }
+    body.paranoia main div {
+      top: 10rem;
+    }
+  }
+  
+  @media all and (min-width: 46rem) and (max-width: 61.06rem) {
+    .logo h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  nav {
+    align-items: baseline;
+    display: flex;
+    margin: auto;
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    margin-left: 2rem;
+    align-content: space-between;
+  }
+  
+  nav ul li a,
+  .orientation,
+  form.zoeken label p {
+    color: #003082;
+  }
+  
+  @media all and (min-width: 10rem) and (max-width: 46rem) {
+    nav ul li {
+      margin-left: 1rem;
+    }
+    nav ul li .orientation,
+    form.zoeken label p {
+      display: none;
+    }
+    nav ul li a {
+      font-size: 0;
+    }
+  }
+  
+  @media all and (min-width: 46rem) and (max-width: 61.06rem) {
+    nav ul li {
+      margin-left: 1rem;
+    }
+    nav ul li a,
+    .orientation,
+    form.zoeken label p {
+      font-size: 0;
+    }
+  }
+  /* ==================== HEADER AND NAV END ==================== */
+  /* ==================== HERO ==================== */
+  
+  header {
+    height: 30rem;
+    background: url(../img/hero.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+    margin-bottom: -5rem;
+    margin-top: 3.7rem;
+  }
+  
+  header.sportcommentaar {
+    height: 21.88rem;
+    background: url(../img/sportcommentaar/sportcommentaar-header.jpg) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
+  header img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  header h3 {
+    background: rgba(0, 48, 130, .8);
+    padding: 2rem;
+    box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+    position: relative;
+    width: 50%;
+    color: #FFF;
+    top: 50%;
+    transform: translateY(-90%);
+    -ms-transform: translateY(-90%);
+    -moz-transform: translateY(-90%);
+    -webkit-transform: translateY(-90%);
+    -o-transform: translateY(-90%);
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  header video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+  /* ==================== HERO END ==================== */
+  /* ==================== SIDEBAR FILTER & SORTEER ==================== */
+  
+  aside {
+    background: #fff;
+    box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+    padding: 2rem;
+    display: inline-block;
+  }
+  
+  aside button {
+    background: #F3F3F4;
+    color: #0079D3;
+    padding: 0.5em;
+    box-shadow: inset 0 -.125rem 0 #E6E6E9;
+    margin: 0 0.5rem 0.7rem 0;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: left;
+  }
+  
+  aside label.filter {
+    background: #e6b517!important;
+    box-shadow: 0 -.125rem 0 #cfa317 inset!important;
+    padding: 0.5em;
+    color: #003082;
+    margin: 0 0.5rem 0.7rem 0;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: left;
+  }
+  
+  aside label.filter:hover {
+    color: #003082;
+    background: #cfa317!important;
+    box-shadow: 0 -.125rem 0 #cfa317 inset;
+  }
+  
+  legend,
+  aside h4 {
+    padding: 1rem 0rem 1rem 0rem;
+    font-weight: 700;
+  }
+  
+  aside form fieldset ul li {
+    display: block;
+    padding: 0.5rem;
+  }
+  
+  aside form fieldset ul li.genre,
+  aside form fieldset ul li.sorteer {
+    background: #F3F3F4;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  aside label.filter {
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  aside label.filter:hover {
+    background: #cfa317!important;
+  }
+  
+  aside form fieldset ul li label.genre:after,
+  aside form fieldset ul li label.sorteer:after,
+  aside label.filter:after {
+    border-color: #A3A3A3 transparent transparent!important;
+    border-style: solid;
+    border-width: 5px 5px 0!important;
+    content: " ";
+    float: right;
+    margin-top: 0.6em;
+  }
+  
+  aside label.filter:after {
+    border-color: #003082 transparent transparent!important;
+  }
+  
+  input[type="checkbox"],
+  label.genre:before,
+  label.sorteer:before,
+  label.filter:before {
+    display: none;
+  }
+  
+  aside form fieldset ul li label {
+    position: relative;
+  }
+  
+  aside form:nth-of-type(1) fieldset ul li:not(.genre) label:before,
+  aside form:nth-of-type(2) fieldset ul li:not(.sorteer) label:before {
+    content: '';
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #b5b5bc;
+    border-radius: 1px;
+    margin-right: 0.625rem;
+  }
+  
+  aside form:nth-of-type(1) fieldset ul li:not(.genre) label:after,
+  aside form:nth-of-type(2) fieldset ul li:not(.sorteer) label:after {
+    content: '';
+    width: 1.25rem;
+    height: .5rem;
+    position: absolute;
+    top: .1875rem;
+    left: .25rem;
+    border: 1px solid #0079d3;
+    border-top: none;
+    border-right: none;
+    opacity: 0;
+    -webkit-transform: rotate(-25deg) skewY(-23deg);
+    transform: rotate(-25deg) skewY(-23deg);
+    transition: opacity .2s ease-in-out;
+  }
+  
+  aside form:nth-of-type(1) fieldset ul li:not(.genre) input[type="checkbox"]:checked + label:after,
+  aside form:nth-of-type(2) fieldset ul li:not(.sorteer) input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
+  
+  aside form fieldset ul li ul {
+    height: 0.0625rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  aside form fieldset ul li input#genre,
+  aside form fieldset ul li input#sorteer {
+    display: none;
+  }
+  
+  aside form fieldset ul li input#genre:checked ~ ul {
+    height: 33.31rem;
+    opacity: 1;
+  }
+  
+  aside form fieldset ul li input#sorteer:checked ~ ul {
+    height: 12.81rem;
+    opacity: 1;
+  }
+  
+  aside form fieldset ul li input#genre:checked + label.genre:after,
+  aside form fieldset ul li input#sorteer:checked + label.sorteer:after,
+  aside input#filter:checked + label.filter:after {
+    border-width: 0 5px 5px 5px!important;
+    border-color: transparent transparent #a3a3a3 transparent!important;
+    background-clip: #000;
+  }
+  
+  aside input#filter:checked + label.filter:after {
+    border-color: transparent transparent #003082 transparent!important;
+  }
+  
+  aside form ol li {
+    display: inline-block;
+  }
+  
+  aside form ol li a {
+    background: #f3f3f4;
+    color: #0079D3;
+    padding: 0.5em;
+    box-shadow: inset 0 -.125rem 0 #e6e6e9;
+    margin: 0 0.5em 0.7em 0;
+    display: block;
+  }
+  
+  aside form ol li a:hover,
+  aside form button:hover {
+    box-shadow: inset 0 -3.2rem 0 #e6e6e9;
+    color: #0079D3;
+  }
+  /* ==================== SIDEBAR FILTER & SORTEER END ==================== */
+  /* ==================== VERHALEN ==================== */
+  
+  article {
+    box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+    background: #fff;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .full article {
+    width: 100%;
+  }
+  
+  section article {
+    background: linear-gradient(180deg, rgba(255, 201, 23, .9) 0, #ffc917 60px, #ffc917);
+    margin: 0;
+    padding-top: 6rem;
+  }
+  
+  section picture img {
+    position: relative;
+  }
+  
+  article picture {
+    max-height: 8.75rem;
+    overflow: hidden;
+    margin-bottom: -2rem;
+    position: relative;
+    top: -2rem;
+    margin-bottom: 0rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    display: flex;
+  }
+  
+  section:nth-child(1) {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  section picture {
+    max-height: 34.5rem;
+    top: 0;
+    box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  article picture img,
+  section picture img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+  }
+  
+  article picture:after,
+  section picture:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .4) 0, rgba(0, 0, 0, .2));
+  }
+  
+  article h2,
+  section:nth-child(1) h2 {
+    position: absolute;
+    z-index: 10;
+    color: #FFF;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+    font-weight: 700;
+    max-width: 15rem;
+    top: 0.5rem;
+    line-height: 2.5rem;
+  }
+  
+  section:nth-child(1) h2 {
+    left: 2rem;
+  }
+  
+  section picture h2,
+  section article h2 {
+    max-width: 26rem;
+    left: 2rem;
+  }
+  
+  article p {
+    margin: 1.25rem 0 1.25rem 0;
+  }
+  
+  small {
+    display: flex;
+    font-weight: 700;
+  }
+  
+  small span:last-of-type {
+    margin-left: auto;
+  }
+  
+  small svg {
+    left: 0;
+  }
+  
+  .like {
+    color: #060922;
+    background: #FFC917;
+    position: absolute;
+    right: 2rem;
+    top: -0.9375rem;
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    font-size: 0;
+    box-shadow: 0 2px 0 0 rgba(7, 7, 33, .15);
+    z-index: 10;
+  }
+  
+  .like:focus {
+    outline: none;
+  }
+  
+  .like span {
+    display: block;
+    position: absolute;
+    color: #060922;
+    left: 55%;
+    top: 50%;
+    font-size: .6rem;
+    -webkit-transform: translate(calc(-50% + 0.9375rem), calc(-50% - 0.9375rem));
+    -moz-transform: translate(calc(-50% + 0.9375rem), calc(-50% - 0.9375rem));
+    -ms-transform: translate(calc(-50% + 0.9375rem), calc(-50% - 0.9375rem));
+    -o-transform: translate(calc(-50% + 0.9375rem), calc(-50% - 0.9375rem));
+    transform: translate(calc(-50% + 0.9375rem), calc(-50% - 0.9375rem));
+  }
+  
+  .like svg {
+    width: 1.25rem;
+    height: auto;
+    position: relative;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.15s ease;
+    -moz-transition: -moz-transform 0.15s ease;
+    transition: transform 0.15s ease;
+    left: 0;
+    top: 0;
+    margin: 0;
+    fill: #060922;
+  }
+  
+  svg.big {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  
+  a.arrowlink {
+    margin-top: auto;
+  }
+  
+  a.arrowlink svg {
+    fill: #2D77BD;
+  }
+  /* ==================== VERHALEN END ==================== */
+  /* ==================== FOOTER ==================== */
+  
+  footer {
+    width: 100%;
+    background: #FFF;
+    z-index: 100;
+    padding: .875rem;
+  }
+  /* ==================== FOOTER END ==================== */
+  /* ==================== MEDIA QUERIES ==================== */
+  
+  @media all and (min-width: 10rem) {
+    footer p {
+      width: 100%;
+      margin: auto;
+    }
+  }
+  
+  @media all and (min-width: 10rem) and (max-width: 46rem) {
+    nav section {
+      width: 15%;
+      margin: auto 0;
+    }
+    nav ul {
+      justify-content: flex-end;
+      width: 85%;
+    }
+    a:hover svg,
+    .orientation:hover svg,
+    a.arrowlink:hover svg {
+      left: -0.5rem;
+    }
+    aside {
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+    aside input#filter:checked ~ form {
+      display: block;
+      margin-top: 1rem;
+    }
+    aside form {
+      display: none;
+    }
+    body.sportcommentaar main {
+      max-width: 100%;
+      padding: 0.875rem;
+    }
+    blockquote:before {
+    font-size: 5em;
+}
+    blockquote:first-of-type:before {
+    left: 0rem;
+    top: 28rem;
+}
+blockquote:last-of-type:before {
+    right: 0rem;
+    top: 41rem;
+}
+    body.sportcommentaar main p {
+      transform: skew(0deg);
+      margin: 1rem 0 0 0;
+    }
+    header.sportcommentaar {
+      background-position: 66%;
+    }
+    video {
+      display: none;
+    }
+    main,
+    section {
+      flex-direction: column;
+    }
+    main {
+      max-width: 100%;
+      padding: 0;
+    }
+    article {
+      margin-bottom: 2rem;
+    }
+    article:last-child {
+      margin-bottom: 0;
+    }
+    header {
+      background-attachment: scroll;
+      padding: 0rem 0.875rem 0 0.875rem;
+    }
+    header h3 {
+      width: 100%;
+    }
+    article h2 {
+      max-width: 12rem;
+    }
+    section picture {
+      width: 100%;
+      max-height: 10rem;
+      margin: 0;
+    }
+    body.sportcommentaar .container-about section,
+    body.neerslachtig .container-about section,
+    body.sportcommentaar .container-about section.download > div,
+    body.neerslachtig .container-about section.download > div,
+    body.sportcommentaar .container-about > div,
+    body.neerslachtig .container-about > div {
+      flex-direction: column;
+      width: 100%;
+    }
+    body.sportcommentaar section button,
+    body.neerslachtig section button {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    section.schrijver div {
+      margin-left: 0;
+    }
+    section.schrijver img {
+      margin-top: 1rem;
+    }
+    .share button,
+    .share button:first-child {
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+    body.sportcommentaar .container-about div section.download,
+    body.neerslachtig .container-about div section.download,
+    body.sportcommentaar .container-about div section.share,
+    body.neerslachtig .container-about div section.share {
+      width: 100%;
+    }
+    body.sportcommentaar .container-about section form,
+    body.neerslachtig .container-about section form {
+      width: 100%;
+    }
+    body.sportcommentaar .container-about section form label,
+    body.neerslachtig .container-about section form label {
+      display: block;
+      width: 100%;
+    }
+    blockquote:first-of-type:before {
+    left: 0rem;
+}
+blockquote:last-of-type:before {
+    right: 0rem;
+    top: 41rem;
+}
+body.neerslachtig main {
+    display: flex;
+    margin-top: 3.75rem!important;
+    justify-content: center;
+  }
+  body.neerslachtig main img:first-child {
+    order: 1;
+    transform: rotate(-90deg);
+  }
+  body.neerslachtig main p {
+    max-width: 100%;
+  }
+  body.neerslachtig main img {
+    transform: rotate(90deg);
+    max-width: 50%;
+    order: 3;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+  body.neerslachtig main p {
+    order: 2;
+  }
+  body.neerslachtig main h1 {
+    order: 4;
+  }
+    body.neerslachtig main h1 {
+      font-size: 2.2em;
+      margin: 0;
+    }
+    body.neerslachtig main h1:last-child {
+      left: 0.3125rem;
+      top: -1.5rem;
+    }
+    form.zoeken label input[type=search] {
+      padding-left: 0;
+      ;
+    }
+  }
+  
+  @media (min-width: 46rem) {
+    aside {
+      width: 30%;
+    }
+    aside label.filter,
+    aside input:first-child {
+      display: none;
+    }
+    main {
+      max-width: 70%;
+    }
+    body.neerslachtig main {
+      display: block;
+      margin-top: 10rem!important;
+      max-width: 100%!important;
+      width: 100%;
+    }
+  }
+  
+  @media all and (min-width: 46rem) and (max-width: 61.06rem) {
+    nav section {
+      width: 50%;
+      margin: auto 0;
+    }
+    nav ul {
+      width: 50%;
+      justify-content: flex-end;
+    }
+    a:hover svg,
+    .orientation:hover svg,
+    a.arrowlink:hover svg {
+      left: -0.5rem;
+    }
+    .container-about div {
+      flex-direction: column;
+      align-items: center;
+    }
+    body.sportcommentaar .container-about div section.download,
+    body.neerslachtig .container-about div section.download,
+    body.sportcommentaar .container-about div section.share,
+    body.neerslachtig .container-about div section.share {
+      width: 100%;
+    }
+    .share {
+      margin-bottom: 2rem;
+    }
+    blockquote:first-of-type:before {
+    left: 0rem;
+}
+blockquote:last-of-type:before {
+    right: 0rem;
+    top: 48rem;
+}
+        body.neerslachtig main h1 {
+    font-size: 4.5em;
+  }
+  body.neerslachtig main h1:last-child {
+    left: 0.5rem;
+  }
+  body.neerslachtig main {
+    display: flex;
+    margin-top: 3.75rem!important;
+    justify-content: center;
+  }
+  body.neerslachtig main img:first-child {
+    order: 1;
+    transform: rotate(-90deg);
+    margin-bottom: 0;
+  }
+  body.neerslachtig main p {
+    max-width: 75%;
+  }
+  body.neerslachtig main img {
+    shape-outside: ellipse(8.125rem 6.25rem at 50% 50%) padding-box;
+    transform: rotate(90deg);
+    max-width: 50%;
+    order: 3;
+    padding-left: 0;
+    margin-top: -5rem;
+    margin-bottom: -11rem;
+  }
+  body.neerslachtig main p {
+    order: 2;
+    margin-top: -5rem;
+  }
+  body.neerslachtig main h1 {
+    order: 4;
+  }
+    section:nth-child(1) {
+      flex-direction: column;
+    }
+    section article {
+      width: 100%;
+    }
+    article {
+      width: calc(50% - (0.875rem/2));
+    }
+    section picture {
+      width: 100%;
+      max-height: 10rem;
+      margin: 0;
+    }
+    nav {
+      margin-right: 0;
+    }
+    header h3 {
+      width: 100%;
+    }
+    header {
+      background-attachment: scroll;
+      padding: 0rem 0.875rem 0 0.875rem;
+    }
+    video {
+      display: none;
+    }
+  }
+  
+  @media all and (min-width: 61.06rem) and (max-width: 64rem) {
+    main {
+      width: 75%;
+    }
+    nav section {
+      width: 28%;
+      justify-content: flex-start;
+    }
+    nav ul {
+      width: 72%;
+      justify-content: flex-end;
+    }
+    a:hover svg,
+    .orientation:hover svg,
+    a.arrowlink:hover svg {
+      left: -0.5rem;
+    }
+    body.sportcommentaar .container-about section.download,
+    body.neerslachtig .container-about section.download,
+    body.sportcommentaar .container-about .share,
+    body.neerslachtig .container-about .share {
+      align-items: flex-start;
+    }
+    body.sportcommentaar .container-about section.download,
+    body.neerslachtig .container-about section.download,
+    body.sportcommentaar .container-about .share,
+    body.neerslachtig .container-about .share {
+      max-width: 100%;
+    }
+    .share {
+      margin-bottom: 2rem;
+    }
+    body.neerslachtig main h1 {
+      font-size: 4.5em;
+    }
+    body.neerslachtig main h1:last-child {
+      left: 0.5rem;
+    }
+    body.neerslachtig main {
+      display: flex;
+      justify-content: center;
+    }
+    body.neerslachtig main img:first-child {
+      order: 1;
+      transform: rotate(-90deg);
+      margin-top: -10rem;
+    margin-bottom: 0;
+    }
+    body.neerslachtig main p {
+      max-width: 75%;
+    }
+    body.neerslachtig main img {
+      shape-outside: ellipse(8.125rem 6.25rem at 50% 50%) padding-box;
+      transform: rotate(90deg);
+      max-width: 50%;
+      order: 3;
+      padding-left: 0;
+      margin-top: -5rem;
+    margin-bottom: -11rem;
+    }
+    body.neerslachtig main p {
+      order: 2;
+      margin-top: -5rem;
+    }
+    body.neerslachtig main h1 {
+      order: 4;
+    }
+    aside {
+      width: 25%;
+    }
+    section picture {
+      max-width: 50%;
+    }
+    section article {
+      width: 50%;
+    }
+    article {
+      width: calc(50% - (0.875rem/2));
+    }
+    nav {
+      margin-right: 0;
+    }
+    video {
+      display: none;
+    }
+    main {
+      justify-content: space-between;
+      max-width: 100%;
+    }
+    aside {
+      min-width: 25%;
+    }
+  }
+  
+  @media only screen and (min-width: 64rem) {
+    nav section {
+      width: 30%;
+      margin-left: auto;
+    }
+    nav ul {
+      width: 70%;
+      justify-content: flex-end;
+    }
+    nav {
+      margin-right: 0;
+    }
+    article {
+      width: calc(50% - (0.875rem/2));
+    }
+    section article {
+      width: 50%;
+    }
+    section picture {
+      max-width: 50%;
+    }
+    video {
+      display: none;
+    }
+    footer p {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 75rem) {
+    video {
+      display: block;
+    }
+  }
+  
+  @media only screen and (min-width: 75rem) {
+    nav section {
+      width: 40%;
+      margin-left: auto;
+    }
+    nav ul {
+      width: 60%;
+      justify-content: flex-end;
+    }
+    footer p {
+      width: 75%;
+    }
+  }
+  
+  @media only screen and (min-width: 85rem) {
+    nav section {
+      width: 43%;
+      margin-left: auto;
+    }
+    nav ul {
+      width: 46%;
+      margin-right: 4rem;
+    }
+  }
+  
+  @media only screen and (min-width: 90rem) {
+    nav section {
+      width: 24%;
+      margin-left: auto;
+    }
+    nav ul {
+      width: 64%;
+      margin: 0;
+      justify-content: center;
+    }
+/* ==================== MEDIA QUERIES END ==================== */
